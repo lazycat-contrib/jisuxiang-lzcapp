@@ -9,7 +9,8 @@ on:
       - lzc-manifest.yml
       - package.yml
   schedule:
-    - cron: "23 3 * * *"
+    # GitHub Actions cron 为 UTC；0 1 * * * = 北京时间每天早上 9:00
+    - cron: "0 1 * * *"
   workflow_dispatch:
 
 permissions:
