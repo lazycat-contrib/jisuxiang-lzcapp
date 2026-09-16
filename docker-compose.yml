@@ -1,7 +1,0 @@
-services:
-    jisuxiang:
-        container_name: jisuxiang
-        restart: always
-        ports:
-            - 3000:3000
-        image: star7th/jisuxiang:latest

@@ -1,0 +1,14 @@
+application:
+  subdomain: jisuxiang
+  background_task: true
+  multi_instance: false
+  public_path:
+    - /
+  upstreams:
+    - location: /
+      backend: http://jisuxiang:3000/
+
+services:
+  jisuxiang:
+    # upstream: star7th/jisuxiang:latest
+    image: docker.1ms.run/star7th/jisuxiang:latest

@@ -1,0 +1,11 @@
+package: cloud.lazycat.app.jisuxiang
+version: 0.0.1
+name: 极速箱
+description: "高效开发工具集成平台"
+min_os_version: "1.5.0"
+homepage: https://github.com/star7th/jisuxiang
+author: star7th
+locales:
+  zh:
+    description: "高效开发工具集成平台"
+    name: 极速箱

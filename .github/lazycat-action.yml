@@ -1,0 +1,42 @@
+version: 1
+
+project:
+  root: .
+  build_config: lzc-build.yml
+  package_file: package.yml
+  output: dist/jisuxiang.lpk
+  target_arch: amd64
+
+update:
+  strategy: publish
+  allow_downgrade: false
+  version_source:
+    type: image
+    image: jisuxiang
+    bump: patch
+
+build:
+  run_buildscript: false
+
+images:
+  # 上游无 SemVer tag，仅 latest（mutable）：bump: patch 按 amd64 digest 变化自动升 patch
+  - id: jisuxiang
+    target: service
+    service: jisuxiang
+    source: star7th/jisuxiang
+    channel: custom
+    sort: created
+    tag_regex: '^latest$'
+    delivery:
+      mode: mirror
+      require_digest_match: true
+
+stores:
+  official:
+    # Official store publication is intentionally disabled; publish only to Miaomiao Store.
+    enabled: false
+  private:
+    enabled: true
+    skip_if_version_exists: true
+    name: 极速箱
+    summary: 高效开发工具集成平台
