@@ -10,5 +10,5 @@ application:
 
 services:
   jisuxiang:
-    # upstream: star7th/jisuxiang:latest
-    image: docker.1ms.run/star7th/jisuxiang:latest
+    # upstream: star7th/jisuxiang:latest@sha256:83ca41ff730d70b6f847a1f616b45e2c9960c4426b1ebfc7ce331a772123195a
+    image: docker.1ms.run/star7th/jisuxiang:latest@sha256:83ca41ff730d70b6f847a1f616b45e2c9960c4426b1ebfc7ce331a772123195a
